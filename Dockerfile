@@ -11,4 +11,5 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && export COMPOSER_HOME=/usr/local \
-    && composer global require squizlabs/php_codesniffer:~1.5 
+    && composer global require squizlabs/php_codesniffer:~1.5 \
+    && echo 'export PATH=/usr/local/vendor/bin:$PATH' >> $HOME/.bashrc
