@@ -13,3 +13,4 @@ RUN apt-get update \
     && export COMPOSER_HOME=/usr/local \
     && composer global require squizlabs/php_codesniffer:~1.5 \
     && echo 'export PATH=/usr/local/vendor/bin:$PATH' >> $HOME/.bashrc
+    && ln -s /usr/local/vendor/bin/phpcs /root/.composer/vendor/bin/phpcs
